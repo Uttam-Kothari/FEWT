@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = parseInt(prompt("Enter starting number"));
+      let b = parseInt(prompt("Enter ending number"));
+      let i,
+        c = 0;
+
+      for (i = a; i <= b; i++) {
+        for (j = 2; j < i; j++) {
+          if (i % j == 0) {
+            c++;
+          }
+          if (c) {
+            continue;
+          } else {
+            document.write(i + " ");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation: moveBox 8s;
+        animation-delay: 2s;
+      }
+
+      @keyframes moveBox {
+        0% {
+          left: 0px;
+          top: 0px;
+        }
+        25% {
+          left: 300px;
+          top: 0px;
+        }
+        50% {
+          left: 300px;
+          top: 300px;
+        }
+        75% {
+          left: 0px;
+          top: 300px;
+        }
+        100% {
+          left: 0px;
+          top: 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!--all in one form 2-->
+
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Effects Example</title>
+
+    <style>
+      a:link {
+        color: orange;
+      }
+
+      a:visited {
+        color: red;
+      }
+
+      p::first-line {
+        color: blue;
+        font-size: 22px;
+        font-weight: bold;
+      }
+
+      p::first-letter {
+        color: green;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      ::selection {
+        background-color: yellow;
+        color: black;
+      }
+
+      .box {
+        width: 250px;
+        height: 100px;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 100px;
+        font-size: 20px;
+        border: 2px solid black;
+      }
+
+      .box:hover {
+        background-color: green;
+        color: white;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>CSS Pseudo Class and Pseudo Element Example</h2>
+
+    <p>
+      <a href="https://www.google.com">Visit Google</a>
+    </p>
+
+    <p>
+      This paragraph demonstrates the first-line and first-letter
+      pseudo-elements. The first line appears in blue and bold, while the first
+      letter is enlarged and colored green. Select some text to see the
+      selection effect.
+    </p>
+
+    <div class="box">Mouse Over Me</div>
+  </body>
+</html>
