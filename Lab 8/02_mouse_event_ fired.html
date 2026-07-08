@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Events</title>
+    <style> 
+    #box 
+        { width: 200px; 
+        height: 200px; 
+        background-color: blue; 
+        color: white; 
+        display: flex; 
+        justify-content: center;
+         align-items: center; 
+         cursor:pointer; 
+        }
+    </style>
+  </head>
+  <body>
+    <div id="box">Click Me</div>
+    <script>
+      const box = document.getElementById("box");
+      box.addEventListener("click", function () {
+        box.innerHTML = "Clicked!";
+      })
+       box.addEventListener("dblclick", function () {
+        box.innerHTML = "double clicked!";
+      })
+       box.addEventListener("mousedown", function () {
+        box.innerHTML = "mouse down!";
+      })
+      box.addEventListener("mouseup", function () {
+        box.innerHTML = "mouse up!";
+      })
+      box.addEventListener("mouseover", function () {
+        box.innerHTML = "mouse over!";
+      })
+      box.addEventListener("mouseout", function () {
+        box.innerHTML = "mouse out!";
+      })
+      box.addEventListener("mouseenter", function () {
+        box.innerHTML = "mouse enter!";
+      })
+      box.addEventListener("mouseleave", function () {
+        box.innerHTML = "mouse leave!";
+      })
+      box.addEventListener("mousemove", function () {
+        box.innerHTML = "mouse move!";
+      })
+    ;
+    </script>
+  </body>
+</html>

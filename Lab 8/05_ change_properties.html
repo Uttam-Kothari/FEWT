@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> change in properties</title>
+  </head>
+  <body>
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores
+      illo nobis officia fugiat veniam incidunt animi reiciendis dolore quam,
+      similique voluptas totam nisi omnis neque labore hic. Libero tempore
+      temporibus quia, soluta optio quos!
+    </p>
+    <script>
+        const para = document.getElementById("para");
+        para.addEventListener("mouseover", function () {
+            para.style.color = "red";
+        })
+         para.addEventListener("mouseout", function () {
+            para.style.color = "black";
+        })
+         para.addEventListener("click", function () {
+            para.style.color = "blue";
+        })
+        ;
+    </script>
+  </body>
+</html>
