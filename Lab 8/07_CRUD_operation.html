@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student CRUD</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background: #f4f7fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .container {
+        width: 700px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .input-box {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #007bff;
+      }
+
+      button {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      #add {
+        background: #28a745;
+      }
+
+      #add:hover {
+        background: #218838;
+      }
+
+      #update {
+        background: #007bff;
+      }
+
+      #update:hover {
+        background: #0056b3;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+      }
+
+      th {
+        background: #007bff;
+        color: white;
+        padding: 12px;
+      }
+
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+
+      tr:nth-child(even) {
+        background: #f9f9f9;
+      }
+
+      tr:hover {
+        background: #eef4ff;
+      }
+
+      .edit-btn {
+        background: #ffc107;
+        color: black;
+      }
+
+      .edit-btn:hover {
+        background: #e0a800;
+      }
+
+      .delete-btn {
+        background: #dc3545;
+      }
+
+      .delete-btn:hover {
+        background: #b02a37;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Student CRUD Application</h2>
+
+      <div class="input-box">
+        <input type="text" id="text" placeholder="Enter Student Name" />
+
+        <button id="add" onclick="add()">Add</button>
+
+        <button id="update" onclick="update()">Update</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Student Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="tablebody"></tbody>
+      </table>
+    </div>
+
+    <script>
+      let array = [];
+      let editIndex = -1;
+
+      function display() {
+        let temp = "";
+
+        for (let i = 0; i < array.length; i++) {
+          temp += `
+        <tr>
+            <td>${i + 1}</td>
+            <td>${array[i]}</td>
+            <td>
+                <button class="edit-btn" onclick="edit(${i})">Edit</button>
+
+                <button class="delete-btn" onclick="deletedata(${i})">Delete</button>
+            </td>
+        </tr>
+        `;
+        }
+
+        document.getElementById("tablebody").innerHTML = temp;
+      }
+
+      function add() {
+        let text = document.getElementById("text").value.trim();
+
+        if (text == "") {
+          alert("Please enter student name.");
+          return;
+        }
+
+        array.push(text);
+
+        display();
+
+        document.getElementById("text").value = "";
+      }
+
+      function edit(index) {
+        document.getElementById("text").value = array[index];
+
+        editIndex = index;
+      }
+
+      function deletedata(index) {
+        array.splice(index, 1);
+
+        display();
+
+        if (editIndex == index) {
+          editIndex = -1;
+          document.getElementById("text").value = "";
+        }
+      }
+
+      function update() {
+        let text = document.getElementById("text").value.trim();
+
+        if (editIndex == -1) {
+          alert("Please select a record first.");
+          return;
+        }
+
+        if (text == "") {
+          alert("Please enter student name.");
+          return;
+        }
+
+        array[editIndex] = text;
+
+        editIndex = -1;
+
+        document.getElementById("text").value = "";
+
+        display();
+      }
+    </script>
+  </body>
+</html>
