@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = parseInt(prompt("Enter length of password: "));
+      
+      let char =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+
+      let CharPassword = "";
+
+      for (let i = 0; i < n; i++) {
+        ans = Math.floor(Math.random() * char.length);
+        CharPassword += char[ans];
+      }
+      document.write("<br>Random password: " + CharPassword);
+
+    </script>
+  </body>
+</html>

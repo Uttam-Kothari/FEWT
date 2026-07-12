@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Enter length of password: "));
+
+        // method 1
+        document.write(
+          "<br>Random Password(only digit): " + parseInt(Math.random() * Math.pow(10, n))); 
+
+        //method 2
+
+        // let password="";
+        // for(let i=0;i<n;i++){
+        //     password+=Math.floor(Math.random()*9);
+        // }
+        // document.write("<br>Random password: " + password);
+    </script>
+</body>
+</html>

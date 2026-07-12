@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let day = parseInt(prompt("Enter Birth Day (DD):"));
+      let month = parseInt(prompt("Enter Birth Month (MM):"));
+      let year = parseInt(prompt("Enter Birth Year (YYYY):"));
+
+      let todayDate = new Date();
+
+      let birthDate = new Date(year, month - 1, day);
+
+      let age = todayDate.getFullYear() - birthDate.getFullYear();
+
+      let monthDifference = todayDate.getMonth() - birthDate.getMonth();
+
+      if (
+        monthDifference < 0 ||
+        (monthDifference == 0 && todayDate.getDate() < birthDate.getDate())
+      ) {
+        age--;
+      }
+
+      document.write("Your Age is: " + age + " years");
+    </script>
+  </body>
+</html>
