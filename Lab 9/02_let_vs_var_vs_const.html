@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=1;
+        let b=2;
+        const p=3;
+
+        if(true){
+            var a=4;
+            let b=5;
+            const p=6;
+
+            console.log(a);
+            console.log(b);
+            console.log(p);    
+        }
+
+        function fun(){
+            var a=7;
+            let b=8;
+            const p=9;
+            
+            console.log(a);
+            console.log(b);
+            console.log(p);    
+        }
+        console.log("In function")
+        fun();
+
+        console.log("Outer")
+        console.log(a);
+        console.log(b);
+        console.log(p);
+
+
+    </script>
+</body>
+</html>
