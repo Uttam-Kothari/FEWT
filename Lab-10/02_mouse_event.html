@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     #box {
+        width: 300px;
+        height: 200px;
+        background-color: lightblue;
+        color: white;
+        margin: auto;
+        text-align: center;
+        line-height: 200px;
+        font-size: 25px;
+        border-radius: 10px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">Click Me</div>
+    <script>
+      const box = document.getElementById("box");
+      box.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+        box.innerHTML = "Right Clicked";
+      });
+
+      box.addEventListener("click", function (e) {
+        e.preventDefault();
+        box.innerHTML = "Left Clicked";
+      });
+    </script>
+  </body>
+</html>
