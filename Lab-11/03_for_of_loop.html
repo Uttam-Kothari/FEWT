@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let o1 = {
+            name: 'Uttam',
+            age: 18
+        }
+
+        let op1 = { ...o1 };
+
+        console.log(op1);
+
+        for (temp in o1) {
+            console.log(o1[temp]);
+        }
+
+        for (temp of o1.name) {
+            console.log(temp);
+        }
+
+    </script>
+</body>
+</html>
