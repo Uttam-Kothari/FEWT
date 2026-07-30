@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const arr = [1, 2, 3, 4, 5, 6];
+        const arr2 = [7, 8, 9, 10];
+
+        let [x, ,z,...other]=arr;
+        console.log("x="+x);
+        console.log("z="+z);
+        console.log("other="+other);
+
+
+
+        //object
+
+
+        let o1 = {
+            name: 'Uttam',
+            age: 18,
+            Gender:'Male',
+            University:'darshan'
+        }
+
+        let {name,age,...other1}=o1;
+
+        console.log("Name: " +name);
+        console.log("Age: " +age);
+        console.log(other1);
+        
+
+        document.write("Name: " + name+"  ");
+        document.write("Age: " + age+"  ");
+        document.write( JSON.stringify(other1));
+
+    </script>
+</body>
+
+</html>
