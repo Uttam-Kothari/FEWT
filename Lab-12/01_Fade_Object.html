@@ -1,0 +1,35 @@
+<!-- 1. write a jQuery program to hide element with id "myEle" when clicked on a button (A) -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <button id="in">Fade in</button>
+    <button id="out">Fade out</button>
+    <button id="toggle">Fade toggle</button>
+
+    <h1 id="myh1">Uttam</h1>
+
+    <script>
+      $(document).ready(function () {
+        $("#in").click(function () {
+          $("#myh1").fadeIn();
+        });
+
+        $("#out").click(function () {
+          $("#myh1").fadeOut();
+        });
+
+        $("#toggle").click(function () {
+          $("#myh1").fadeToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
