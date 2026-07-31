@@ -1,0 +1,40 @@
+<!-- 2. write a jQuery to slideup, slidedown and slidetoggle image. (A)  -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <button id="up">slide up</button>
+      <button id="down">slide down</button>
+      <button id="toggle">slide Toggle</button>
+    </div>
+    <img
+      src="https://cdn.pixabay.com/photo/2017/07/24/19/57/tiger-2535888_640.jpg"
+      alt=""
+      id="image"
+    />
+
+    <script>
+      $(document).ready(function () {
+        $("#up").click(function () {
+          $("#image").slideUp();
+        });
+
+        $("#down").click(function () {
+          $("#image").slideDown();
+        });
+
+        $("#toggle").click(function () {
+          $("#image").slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>
