@@ -1,0 +1,27 @@
+<!-- 11. write a jQuery program to toggle hide/show element with id ""myEle"" when clicked on a button (A). -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="myele">
+      <h1>Uttam</h1>
+      <h1>Kothari</h1>
+    </div>
+    <button id="click">Click</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#click").click(function () {
+          $(".myele").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>
