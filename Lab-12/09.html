@@ -1,0 +1,27 @@
+<!-- 9. write a jQuery program to hide element with id ""myEle"" when clicked on a button (A) -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+        <h1 id="myele">Uttam</h1>
+        <h1>Kothari</h1>
+        <button id="click">Click</button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#click").click(function () {
+          $("#myele").hide();
+        });
+      });
+    </script>
+  </body>
+</html>
