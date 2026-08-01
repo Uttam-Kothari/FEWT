@@ -1,0 +1,29 @@
+<!-- 7. write a jQuery program to change background color to be "red" to all the childrens of div with "myDiv"as id when user click on a button. (B)  -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <div id="mydiv">
+        <h1 id="h1">Uttam</h1>
+      </div>
+    </div>
+    <button id="click">Click</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#click").click(function () {
+          $("#mydiv").css("background-color", "red");
+          //   $("#mydiv").css({ "background-color": "red" });
+        });
+      });
+    </script>
+  </body>
+</html>
