@@ -1,0 +1,30 @@
+<!-- 5. write a jQuery program to append new list item with "Hello World" to existing unordered list when clicked on button. (A)  -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <ul id="list">
+        <li>Iteam 1</li>
+        <li>Iteam 2</li>
+        <li>Iteam 3</li>
+      </ul>
+      <button id="click">Append iteam</button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#click").click(function () {
+          $("#list").append("<li>Hello World</li> ");
+        });
+      });
+    </script>
+  </body>
+</html>
