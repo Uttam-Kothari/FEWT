@@ -10,14 +10,18 @@ import { useEffect, useState } from 'react'
 // import Contact from './Lab-15extra/components/Contact'
 // import Footer from './Lab-15extra/components/Footer'
 
-import A1C from './Lab-16/A1'
-import A2 from './Lab-16/A2'
-import A3 from './Lab-16/A3'
+// import A1C from './Lab-16/A1'
+// import A2 from './Lab-16/A2'
+// import A3 from './Lab-16/A3'
+
+// import A1 from './Lab-17/A1'
+// import A2 from './Lab-17/A2'
+// import A3 from './Lab-17/A3'
 
 
 
 function App() {
-    
+
     // const [name,setName] = useState(" ");    
     return (
         <>
@@ -36,17 +40,27 @@ function App() {
             {/* Lab-16 */}
 
             {/* A1  */}
-             <A1C/> 
+            {/* <A1C/> */}
 
             {/* A2 */}
-             <A2 /> 
+            {/* <A2 /> */}
 
             {/* A3 */}
-             <A3/> 
+            {/* <A3/> */}
 
 
+            {/* leb 17 */}
 
-        </>
+            {/* A1 */}
+            <A1 /> 
+
+            {/* A2 */}
+            <A2 /> 
+
+            {/* A3 */}
+            <A3 /> 
+
+
     )
 }
 
